@@ -1,6 +1,6 @@
 <?php
 
-namespace HitechraSharedLibLarvel\Rest;
+namespace HitechraSharedLibLaravel\Rest;
 
 use Illuminate\Auth\AuthenticationException;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
