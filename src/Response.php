@@ -25,7 +25,7 @@ class Response
         return response_error(500);
     }
 
-    public static function format($data, bool $success, int $status, string|array $message)
+    public static function format(mixed $data, bool $success, int $status, string|array|null $message)
     {
         return [
             'success' => $success,
@@ -36,7 +36,7 @@ class Response
     }
 
     
-    public static function getMessage($statusCode)
+    public static function getMessage(int $statusCode)
     {
         $status = config('rest.status');
 
