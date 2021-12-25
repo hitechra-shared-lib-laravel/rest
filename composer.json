@@ -1,0 +1,26 @@
+{
+    "name": "hitechra-shared-lib-laravel/rest",
+    "description": "Laravel REST API Helper by Hitechra",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "HitechraSharedLibLaravel\\Rest\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Adeardo Dora Harnanda",
+            "email": "adetxt151@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "HitechraSharedLibLaravel\\Rest\\ServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "require": {}
+}
