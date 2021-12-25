@@ -13,7 +13,7 @@ class ServiceProvider extends LaravelServiceProvider
      */
     public function register()
     {
-        $this->mergeConfigFrom(__DIR__.'/../config/res.php', 'rest');
+        $this->mergeConfigFrom(__DIR__.'/../config/rest.php', 'rest');
     }
 
     /**
