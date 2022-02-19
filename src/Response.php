@@ -28,8 +28,8 @@ class Response
     public static function format(mixed $data, bool $success, int $status, string|array|null $message)
     {
         return [
-            'success' => $success,
-            'status' => $status,
+            'status' => $success ? 'success' : 'error',
+            'code' => $status,
             'message' => $message ?? static::getMessage($status),
             'data' => $data
         ];
