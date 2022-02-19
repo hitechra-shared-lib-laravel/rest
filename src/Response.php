@@ -13,7 +13,7 @@ class Response
     public static function mapException(Throwable $exception)
     {
         if ($exception instanceof ValidationException) {
-            return response_error(422, $exception->errors());
+            return response_error(400, $exception->errors());
         } elseif ($exception instanceof ModelNotFoundException) {
             return response_error(404, $exception->getMessage());
         } elseif ($exception instanceof AuthenticationException) {
