@@ -20,9 +20,11 @@ class Response
             return response_error(403, $exception->getMessage());
         } elseif ($exception instanceof UnauthorizedException) {
             return response_error(401, $exception->getMessage());
+        } elseif ($exception->getCode() >= 400) {
+            return response_error($exception->getCode(), $exception->getMessage());
         }
 
-        return response_error(500);
+        return response_error(500, $exception->getMessage());
     }
 
     public static function format(mixed $data, bool $success, int $status, string|array|null $message)
